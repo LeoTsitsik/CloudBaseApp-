@@ -1,0 +1,69 @@
+services:
+  # 1. Η Βάση Δεδομένων (MongoDB)
+  mongo_db:
+    image: mongo:latest
+    container_name: smarthome_mongo
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password123
+    volumes:
+      - ./mongo-data:/data/db
+    networks:
+      - smarthome-network
+
+  # 2. Το εργαλείο διαχείρισης (Local Database Admin)
+  mongo_express:
+    image: mongo-express
+    container_name: smarthome_admin
+    restart: always
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: password123
+      ME_CONFIG_MONGODB_URL: mongodb://admin:password123@mongo_db:27017/
+      ME_CONFIG_BASICAUTH: false
+    depends_on:
+      - mongo_db
+    networks:
+      - smarthome-network
+
+  # 3. Custom Mock API (Users) - Φτιαγμένο με Dockerfile
+  api_users:
+    build: ./rest-apis
+    container_name: smarthome_users_api
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - smarthome-network
+
+  # 4. Mock API (History) - Έτοιμο Image με Volume
+  api_history:
+    image: clue/json-server
+    container_name: smarthome_history_api
+    restart: always
+    ports:
+      - "3001:80"
+    volumes:
+      - ./rest-apis/history.json:/data/db.json
+    networks:
+      - smarthome-network
+      
+      # 5. User Interface (Appsmith)
+  appsmith:
+    image: index.docker.io/appsmith/appsmith-ce
+    container_name: smarthome_ui
+    restart: always
+    ports:
+      - "8090:80"  # Θα το βλέπουμε στο http://localhost:8090
+      - "9001:9001" # Χρειάζεται για το Supervisor του Appsmith
+    volumes:
+      - ./appsmith-data:/appsmith-stacks  # Εδώ θα σώζει την εφαρμογή σου
+    networks:
+      - smarthome-network
+
+networks:
+  smarthome-network:
+    driver: bridge

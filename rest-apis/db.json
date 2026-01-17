@@ -1,0 +1,7 @@
+{
+  "users": [
+    { "id": 1, "name": "Leonidas", "role": "Admin", "preferences": { "temp": 22, "lights": "warm" } },
+    { "id": 2, "name": "Mary", "role": "User", "preferences": { "temp": 24, "lights": "cool" } },
+    { "id": 3, "name": "Guest", "role": "Guest", "preferences": { "temp": 21, "lights": "auto" } }
+  ]
+}
