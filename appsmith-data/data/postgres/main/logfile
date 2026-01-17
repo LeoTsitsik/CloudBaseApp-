@@ -57,3 +57,25 @@
 2026-01-17 12:39:28.738 UTC [1698] LOG:  background worker "logical replication launcher" (PID 1712) exited with exit code 1
 2026-01-17 12:39:28.739 UTC [1707] LOG:  shutting down
 2026-01-17 12:39:28.893 UTC [1698] LOG:  database system is shut down
+2026-01-17 13:24:23.096 UTC [1698] LOG:  starting PostgreSQL 14.17 (Ubuntu 14.17-1.pgdg24.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2026-01-17 13:24:23.097 UTC [1698] LOG:  listening on IPv6 address "::1", port 5432
+2026-01-17 13:24:23.097 UTC [1698] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-01-17 13:24:23.112 UTC [1698] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-01-17 13:24:23.153 UTC [1699] LOG:  database system was shut down at 2026-01-17 13:24:16 UTC
+2026-01-17 13:24:23.193 UTC [1698] LOG:  database system is ready to accept connections
+2026-01-17 13:24:23.536 UTC [1698] LOG:  received fast shutdown request
+2026-01-17 13:24:23.544 UTC [1698] LOG:  aborting any active transactions
+2026-01-17 13:24:23.547 UTC [1698] LOG:  background worker "logical replication launcher" (PID 1705) exited with exit code 1
+2026-01-17 13:24:23.547 UTC [1700] LOG:  shutting down
+2026-01-17 13:24:23.660 UTC [1698] LOG:  database system is shut down
+2026-01-17 13:34:33.084 UTC [1689] LOG:  starting PostgreSQL 14.17 (Ubuntu 14.17-1.pgdg24.04+1) on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0, 64-bit
+2026-01-17 13:34:33.085 UTC [1689] LOG:  listening on IPv6 address "::1", port 5432
+2026-01-17 13:34:33.085 UTC [1689] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2026-01-17 13:34:33.124 UTC [1689] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2026-01-17 13:34:33.184 UTC [1691] LOG:  database system was shut down at 2026-01-17 13:34:12 UTC
+2026-01-17 13:34:33.224 UTC [1689] LOG:  database system is ready to accept connections
+2026-01-17 13:34:33.596 UTC [1689] LOG:  received fast shutdown request
+2026-01-17 13:34:33.604 UTC [1689] LOG:  aborting any active transactions
+2026-01-17 13:34:33.607 UTC [1689] LOG:  background worker "logical replication launcher" (PID 1697) exited with exit code 1
+2026-01-17 13:34:33.607 UTC [1692] LOG:  shutting down
+2026-01-17 13:34:33.717 UTC [1689] LOG:  database system is shut down

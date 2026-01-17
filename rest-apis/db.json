@@ -1,7 +1,11 @@
 {
   "users": [
-    { "id": 1, "name": "Leonidas", "role": "Admin", "preferences": { "temp": 22, "lights": "warm" } },
-    { "id": 2, "name": "Mary", "role": "User", "preferences": { "temp": 24, "lights": "cool" } },
-    { "id": 3, "name": "Guest", "role": "Guest", "preferences": { "temp": 21, "lights": "auto" } }
+      { "id": 1, "name": "Giannis", "email": "giannis@test.com" }
+     
+  ], 
+  "devices": [
+      { "id": 1, "name": "Φως Σαλονιού", "type": "light", "isOn": false },
+      { "id": 2, "name": "Κλιματιστικό", "type": "ac", "isOn": true },
+      { "id": 3, "name": "Τηλεόραση", "type": "tv", "isOn": false }
   ]
 }
